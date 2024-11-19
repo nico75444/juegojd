@@ -1,6 +1,6 @@
 
 ## 🌐 Publicación en GitHub Pages
-El juego está disponible en: [https://tu-usuario.github.io/tu-repositorio/](https://nico75444.github.io/juegojd/)
+El juego está disponible en: [https://tu-usuario.github.io/tu-repositorio/](https://nico754444.github.io/juegojd/)
 
 ## 🤝 Contribuciones
 ¡Contribuciones, sugerencias y mejoras son bienvenidas! Siéntete libre de abrir un **issue** o enviar un **pull request**.
