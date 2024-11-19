@@ -1,0 +1,169 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: radial-gradient(circle at -6.05% 40.12%, #a158ff 0, #684bff 25%, #003cff 50%, #002edb 75%, #0022b9 100%);
+    margin: 0;
+    padding: 20px;
+    color: #fff;
+    overflow: hidden;
+}
+#pun{
+    color: #000;
+}
+
+.main-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3em;
+    color: #333;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+.hidden {
+    display: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.modal-content {
+background-color: #fff;
+margin: 10% auto;
+padding: 30px;
+border-radius: 15px;
+width: 90%;
+max-width: 500px;
+max-height: 80vh; /* Establece una altura máxima */
+overflow-y: auto; /* Habilita el desplazamiento vertical */
+animation: fadeIn 0.5s;
+box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+color: #000;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #e74c3c;
+    cursor: pointer;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+}
+
+.login-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.login-input {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 80%;
+    max-width: 300px;
+    margin-bottom: 20px;
+    transition: border 0.3s;
+}
+
+.login-input:focus {
+    border: 1px solid #3498db;
+    outline: none;
+}
+
+.login-button {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #e67e22;
+}
+
+.timer-level {
+    color: black; /* Color negro para el nivel y tiempo */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#question {
+    color: black; /* Color negro para la pregunta */
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.error-message {
+    color: red;
+    font-size: 1.2em;
+    margin-top: 10px;
+    display: none; /* Inicialmente oculto */
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #faf5f5;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #3498db;
+    width: 0;
+    transition: width 0.3s;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego "Dive into English"</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="main-container" id="mainContainer">
+    <h1>"Dive into English"</h1>
+    <div class="login-container" id="loginContainer">
+      <input type="text" id="username" class="login-input" placeholder="Ingresa tu nombre" />
+      <input type="password" id="password" class="login-input" placeholder="Ingresa tu contraseña" />
+      <button class="login-button" onclick="startGame()">Entrar</button>
+    </div>
+    <div id="game" class="game-container hidden">
+      <div id="levelAlert" class="hidden"></div>
+      <div class="timer-level">
+        <p id="level">Nivel: <span id="levelValue">1</span></p>
+        <p id="timer">Tiempo: <span id="timerValue">70</span> s</p>
+      </div>
+      <p id="question">¿Cuál es la forma correcta?</p>
+      <div id="options" class="options-container"></div>
+      <div class="error-message" id="errorMessage">Respuesta incorrecta. Intenta de nuevo.</div>
+      <button id="next" class="hidden" onclick="nextLevel()">Siguiente</button>
+      <button id="modalBtn"><i class="fas fa-question-circle"></i> !!aprende mas !!</button>
+      <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+      </div>
+    </div>
+    <div id="score" class="score-container hidden">
+      <p id="pun">Puntuación: <span id="scoreValue" style="color: #000;"></span> de <span id="totalQuestions" style="color: #000;"></span></p>
+      <p id="feedback" class="feedback"></p>
+      <button class="restart-button" onclick="restartGame()">Reiniciar Juego</button>
+    </div>
+  </div>
+
+  <!-- Modal para información sobre el verbo "to be" -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>El Verbo "To Be"</h2>
+        <p>El verbo "to be" es fundamental en inglés y tiene múltiples usos:</p>
+        <h3>1. Identidad y Características</h3>
+        <p>Se usa para describir la identidad de algo o alguien, así como para describir características o estados.</p>
+        <ul>
+            <li><strong>Am:</strong> Utilizado solo con "I" (yo). Ejemplo: "I am a student."</li>
+            <li><strong>Is:</strong> Utilizado con "He", "She", "It". Ejemplos: "He is a teacher.", "It is a sunny day."</li>
+            <li><strong>Are:</strong> Utilizado con "You", "We", "They". Ejemplos: "You are a good friend.", "They are happy."</li>
+        </ul>
+        <h3>2. Ubicación y Estado</h3>
+        <p>También se utiliza para indicar dónde se encuentra algo o alguien, o para expresar un estado emocional o físico.</p>
+        <ul>
+            <li><strong>Ejemplos:</strong></li>
+            <li>"She is at the park."</li>
+            <li>"We are tired."</li>
+            <li>"They are excited."</li>
+        </ul>
+        <h3>3. Pasado del Verbo "To Be"</h3>
+        <p>Las formas en pasado son "was" y "were".</p>
+        <ul>
+            <li>"Was" para "I", "He", "She", "It". Ejemplo: "I was at home yesterday."</li>
+            <li>"Were" para "You", "We", "They". Ejemplo: "They were in the park last weekend."</li>
+        </ul>
+
+        <h2>Presente Simple</h2>
+        <p>El presente simple se utiliza para expresar acciones habituales o hechos generales.</p>
+        <h3>1. Estructura</h3>
+        <ul>
+            <li>Con "He", "She", "It", el verbo lleva una "s" o "es" al final.</li>
+            <li>Con "I", "You", "We", "They", el verbo permanece en su forma base.</li>
+        </ul>
+        <h3>2. Ejemplos</h3>
+        <ul>
+            <li><strong>Acción Habitual:</strong> "She plays tennis every weekend."</li>
+            <li><strong>Verdad General:</strong> "The sun rises in the east."</li>
+            <li><strong>Rutina:</strong> "I drink coffee in the morning."</li>
+        </ul>
+        <p>¡Practica estos conceptos para mejorar tu inglés!</p>
+    </div>
+  </div>
+<!-- Modal para el cambio de nivel -->
+  <div id="levelChangeModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Cambio de Nivel</h2>
+      <p>¡Felicidades! Has alcanzado el Nivel 3, donde empezaremos a practicar el Presente Simple.</p>
+    </div>
+  </div>
+
+  <script src="javascript.js"></script>
+</body>
+</html>
